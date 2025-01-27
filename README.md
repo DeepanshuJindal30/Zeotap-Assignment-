@@ -67,6 +67,6 @@ The project uses three datasets:
 - **Clustering**: Metrics (e.g., Davies-Bouldin Index) and visualization quality.
 
 ## Author
-[Your Name]
+Deepanshu Jindal
 
 
