@@ -1,110 +1,72 @@
-Project Title: eCommerce Transactions Analysis
+# Project Title: eCommerce Transactions Analysis
 
-Overview
-
+## Overview
 This project involves analyzing an eCommerce transactions dataset to derive insights, build predictive models, and segment customers. The tasks include:
 
-Exploratory Data Analysis (EDA): Understanding the structure of the dataset and extracting key insights.
+1. **Exploratory Data Analysis (EDA)**: Understanding the structure of the dataset and extracting key insights.
+2. **Lookalike Model**: Recommending similar customers based on profile and transaction history.
+3. **Customer Segmentation**: Grouping customers into segments using clustering techniques.
 
-Lookalike Model: Recommending similar customers based on profile and transaction history.
-
-Customer Segmentation: Grouping customers into segments using clustering techniques.
-
-Datasets Used
-
+## Datasets Used
 The project uses three datasets:
 
-Customers.csv:
+1. **Customers.csv**:
+   - Contains details about customers such as `CustomerID`, `CustomerName`, `Region`, and `SignupDate`.
+2. **Products.csv**:
+   - Includes product information like `ProductID`, `ProductName`, `Category`, and `Price`.
+3. **Transactions.csv**:
+   - Provides transaction details, including `TransactionID`, `CustomerID`, `ProductID`, `TransactionDate`, `Quantity`, `TotalValue`, and `Price`.
 
-Contains details about customers such as CustomerID, CustomerName, Region, and SignupDate.
+## Task Details
 
-Products.csv:
+### Task 1: Exploratory Data Analysis (EDA)
+- Perform exploratory analysis on the datasets to understand their structure and content.
+- Extract insights such as top regions by customer count and top product categories by sales.
+- **Output**: Insights are printed to the console.
 
-Includes product information like ProductID, ProductName, Category, and Price.
+### Task 2: Lookalike Model
+- **Objective**: Recommend the top 3 similar customers for each customer based on their transaction and profile data.
+- **Steps**:
+  1. Aggregate customer transaction data.
+  2. Normalize features and compute cosine similarity.
+  3. Identify the top 3 similar customers for each customer.
+- **Output**: A CSV file (`Lookalike.csv`) containing similar customer recommendations.
 
-Transactions.csv:
+### Task 3: Customer Segmentation
+- **Objective**: Segment customers into clusters based on purchasing behavior and demographics.
+- **Steps**:
+  1. Aggregate customer data and encode categorical features.
+  2. Apply clustering algorithms (e.g., K-Means).
+  3. Evaluate clusters using Davies-Bouldin Index.
+  4. Visualize clusters using PCA.
+- **Output**: Cluster visualizations and Davies-Bouldin Index value.
 
-Provides transaction details, including TransactionID, CustomerID, ProductID, TransactionDate, Quantity, TotalValue, and Price.
+## Installation and Usage
 
-Task Details
+### Prerequisites
+- Python 3.x
+- Libraries: pandas, numpy, sklearn, matplotlib, seaborn
 
-Task 1: Exploratory Data Analysis (EDA)
+### Running the Project
+1. Place the `Customers.csv`, `Products.csv`, and `Transactions.csv` in the project directory.
+2. Run the Python script `ecommerce_analysis.py`.
 
-Perform exploratory analysis on the datasets to understand their structure and content.
+### Outputs
+- **EDA**: Insights displayed in the console.
+- **Lookalike Model**: `Lookalike.csv` file containing customer recommendations.
+- **Customer Segmentation**: Visualizations displayed and Davies-Bouldin Index printed in the console.
 
-Extract insights such as top regions by customer count and top product categories by sales.
+## File Structure
+- `ecommerce_analysis.py`: Contains the implementation of all three tasks.
+- `Lookalike.csv`: Output of the lookalike model (generated upon execution).
+- `Customers.csv`, `Products.csv`, `Transactions.csv`: Input datasets.
 
-Output: Insights are printed to the console.
+## Evaluation
+- **EDA**: Quality and relevance of insights derived.
+- **Lookalike Model**: Accuracy and logic of recommendations.
+- **Clustering**: Metrics (e.g., Davies-Bouldin Index) and visualization quality.
 
-Task 2: Lookalike Model
+## Author
+[Your Name]
 
-Objective: Recommend the top 3 similar customers for each customer based on their transaction and profile data.
-
-Steps:
-
-Aggregate customer transaction data.
-
-Normalize features and compute cosine similarity.
-
-Identify the top 3 similar customers for each customer.
-
-Output: A CSV file (Lookalike.csv) containing similar customer recommendations.
-
-Task 3: Customer Segmentation
-
-Objective: Segment customers into clusters based on purchasing behavior and demographics.
-
-Steps:
-
-Aggregate customer data and encode categorical features.
-
-Apply clustering algorithms (e.g., K-Means).
-
-Evaluate clusters using Davies-Bouldin Index.
-
-Visualize clusters using PCA.
-
-Output: Cluster visualizations and Davies-Bouldin Index value.
-
-Installation and Usage
-
-Prerequisites
-
-Python 3.x
-
-Libraries: pandas, numpy, sklearn, matplotlib, seaborn
-
-Running the Project
-
-Place the Customers.csv, Products.csv, and Transactions.csv in the project directory.
-
-Run the Python script ecommerce_analysis.py.
-
-Outputs
-
-EDA: Insights displayed in the console.
-
-Lookalike Model: Lookalike.csv file containing customer recommendations.
-
-Customer Segmentation: Visualizations displayed and Davies-Bouldin Index printed in the console.
-
-File Structure
-
-ecommerce_analysis.py: Contains the implementation of all three tasks.
-
-Lookalike.csv: Output of the lookalike model (generated upon execution).
-
-Customers.csv, Products.csv, Transactions.csv: Input datasets.
-
-Evaluation
-
-EDA: Quality and relevance of insights derived.
-
-Lookalike Model: Accuracy and logic of recommendations.
-
-Clustering: Metrics (e.g., Davies-Bouldin Index) and visualization quality.
-
-Author
-
-Deepanshu Jindal
 
